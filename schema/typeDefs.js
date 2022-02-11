@@ -7,6 +7,7 @@ const typeDefs = gql`
     age: Int!
     team: Nationality!
     friends: [User]
+    favoriteMovie: [Movies!]!
   }
 
   enum Nationality {

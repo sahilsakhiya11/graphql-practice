@@ -25,6 +25,16 @@ const resolvers = {
       return movie;
     },
   },
+
+  User: {
+    favoriteMovie: () => {
+      return _.filter(MovieList, (movie) => {
+        const favMovie =
+          movie.yearOfPublication >= 2000 && movie.yearOfPublication <= 2010;
+        return favMovie;
+      });
+    },
+  },
 };
 
 module.exports = { resolvers };
