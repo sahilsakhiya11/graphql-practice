@@ -15,9 +15,18 @@ const typeDefs = gql`
     PAKISTAN
   }
 
+  type Movies {
+    id: ID!
+    name: String!
+    yearOfPublication: Int!
+    isInTheaters: Boolean!
+  }
+
   type Query {
     users: [User!]!
     user(id: ID!): User!
+    movies: [Movies!]!
+    movie(name: String!): Movies!
   }
 `;
 
